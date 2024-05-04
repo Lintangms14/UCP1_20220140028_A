@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>A Day In My Life</title>
+    <style>
+        html, body {
+            margin: 0;
+            padding: 0;
+            height: 100%;
+            width: 100%;
+            font-family: Arial, sans-serif;
+            background-color: #f8f9fa;
+        }
+
+        .navbar {
+            background-color: #343a40;
+            color: #fff;
+            padding: 1rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            transition: background-color 0.3s ease;
+        }
+
+        .navbar:hover {
+            background-color: #2c3136;
+        }
+
+        .navbar-brand {
+            font-size: 1.8rem;
+            text-decoration: none;
+            color: #fff;
+        }
+
+        .nav-links {
+            list-style-type: none;
+            display: flex;
+        }
+
+        .nav-links li {
+            margin-right: 1rem;
+        }
+
+        .nav-links li a {
+            color: #fff;
+            text-decoration: none;
+            font-weight: bold;
+            transition: color 0.3s ease;
+        }
+
+        .nav-links li a:hover {
+            color: #f8f9fa;
+        }
+
+        .header {
+            background-color: #fff;
+            padding: 2rem 0;
+            text-align: center;
+        }
+
+        .header-left,
+        .header-right {
+            font-size: 1.5rem;
+            color: #333;
+        }
+
+        .carousel {
+            width: 100%;
+            overflow: hidden;
+            margin-top: 2rem;
+            position: relative;
+        }
+
+        .carousel-item {
+            width: 100%;
+            display: none;
+            animation: fadeIn 1s ease forwards;
+        }
+
+        .carousel-item img {
+            width: 100%;
+            transition: transform 0.3s ease;
+        }
+
+        .carousel-item:hover img {
+            transform: scale(1.05);
+        }
+
+        .cards {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+            margin-top: 2rem;
+        }
+
+        .card {
+            width: calc(33.333% - 2rem);
+            background-color: #fff;
+            margin-bottom: 2rem;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease;
+            animation: slideInLeft 1s ease forwards;
+            border-radius: 8px;
+            overflow: hidden;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+        }
+
+        .card img {
+            width: 100%;
+            display: block;
+            border-radius: 8px 8px 0 0;
+        }
+
+        .card-content {
+            padding: 1.5rem;
+        }
+
+        .card-content h3 {
+            margin-top: 0;
+            margin-bottom: 1rem;
+            color: #333;
+        }
+
+        .card-content p {
+            color: #666;
+            line-height: 1.6;
+        }
+
+        .footer {
+            background-color: #343a40;
+            color: #fff;
+            text-align: center;
+            padding: 1rem;
+            width: 100%;
+        }
+
+        .slideshow-container {
+            max-width: 100%;
+            position: relative;
+            margin-top: 1rem;
+            margin-bottom: 2rem;
+        }
+
+        .mySlides {
+            display: none;
+            width: 100%;
+        }
+
+        .mySlides img {
+            width: 100%;
+            vertical-align: middle;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+
+        @keyframes slideInLeft {
+            from {
+                transform: translateX(-100%);
+                opacity: 0;
+            }
+            to {
+                transform: translateX(0);
+                opacity: 1;
+            }
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar">
+        <a href="#" class="navbar-brand">A Day In My Life</a>
+        <ul class="nav-links">
+            <li><a href="#" id="link1">Yesterday</a></li>
+            <li><a href="#" id="link2">Calendar</a></li>
+            <li><a href="#" id="link3">About</a></li>
+        </ul>
+    </nav>
+
+    <header class="header">
+        <div class="header-left">
+            <p class="greeting">Selamat <span id="time-greeting"></span></p>
+        </div>
+        <div class="header-right">
+            <p id="date-time"></p>
+        </div>
+    </header>
+
+    <div class="slideshow-container">
+        <div class="mySlides">
+            <img src="https://cdn.pixabay.com/photo/2022/09/27/19/48/ai-generated-7483614_1280.jpg" alt="Slide 1">
+        </div>
+        <div class="mySlides">
+            <img src="https://cdn.pixabay.com/photo/2023/09/01/04/20/natural-landscapes-8226206_1280.jpg" alt="Slide 2">
+        </div>
+        <div class="mySlides">
+            <img src="https://jooinn.com/images/land-3.jpg" alt="Slide 3">
+        </div>
+    </div>
+
+    <div class="cards">
+        <div class="card">
+            <img src="https://d1vbn70lmn1nqe.cloudfront.net/prod/wp-content/uploads/2022/07/06024320/Catat-Ini-X-Manfaat-Bangun-Pagi-bagi-Mental-dan-Fisik.jpg" alt="Card Image 1">
+            <div class="card-content">
+                <h3>Bangun Tidur</h3>
+                <p>"Di hadapan keagungan Sang Pencipta, aku bersujud dengan penuh syukur. Dengan mata yang terbuka pada pagi yang baru, kuucapkan rasa terima kasih atas anugerah hidup ini. Semoga langkahku hari ini dipenuhi dengan keberkahan dan kebaikan, serta menjadi ladang bagi kebaikan bagi sesama."</p>
+            </div>
+        </div>
+        <div class="card">
+            <img src="https://asset-2.tstatic.net/tribunnews/foto/bank/images/makan-sayur_20181008_182151.jpg" alt="Card Image 2">
+            <div class="card-content">
+                <h3>Makan</h3>
+                <p>"Dengan rasa syukur dan kesadaran, mari kita berkumpul di hadapan nikmat yang telah diberikan. Di atas meja yang terhidang, kita tidak hanya mengisi perut, tetapi juga jiwa dengan kebersamaan dan rasa terima kasih atas rezeki yang diberikan. Semoga setiap hidangan menjadi sumber energi dan kebahagiaan, serta menginspirasi kita untuk berbagi kebaikan dengan yang lain."</p>
+            </div>
+        </div>
+        <div class="card">
+            <img src="https://cdn0-production-images-kly.akamaized.net/3tZmKGGAdvquRlXb7JFHzssTG3s=/0x290:6000x3672/469x260/filters:quality(75):strip_icc():format(webp)/kly-media-production/medias/4132871/original/076352400_1661237328-shutterstock_2167861953.jpg" alt="Card Image 3">
+            <div class="card-content">
+                <h3>Bekerja</h3>
+                <p>"Dengan tekad yang teguh dan semangat yang membara, mari kita hadapi tantangan hari ini dengan penuh dedikasi. Di setiap langkah yang kita ambil, mari kita ingat bahwa setiap usaha kita adalah langkah menuju pencapaian yang lebih besar. Dengan fokus dan ketekunan, kita akan mengubah mimpi menjadi kenyataan dan menciptakan jejak yang tak terlupakan dalam perjalanan kita menuju kesuksesan."</p>
+            </div>
+        </div>
+    </div>
+
+    <footer class="footer">
+        <p>&copy; 2024 A Day In My Life. All rights reserved.</p>
+    </footer>
+
+    <script>
+        var slideIndex = 0;
+        showSlides();
+
+        function showSlides() {
+            var i;
+            var slides = document.getElementsByClassName("mySlides");
+            for (i = 0; i < slides.length; i++) {
+                slides[i].style.display = "none";  
+            }
+            slideIndex++;
+            if (slideIndex > slides.length) {slideIndex = 1}    
+            slides[slideIndex-1].style.display = "block";  
+            setTimeout(showSlides, 2000);
+        }
+
+        function updateTime() {
+            var now = new Date();
+            var hours = now.getHours();
+            var greeting = "";
+
+            if (hours < 12) {
+                greeting = "Pagi, Lintang";
+            } else if (hours < 18) {
+                greeting = "Siang, Lintang";
+            } else {
+                greeting = "Malam, Lintang";
+            }
+
+            document.getElementById("time-greeting").textContent = greeting;
+            document.getElementById("date-time").textContent = now.toLocaleString();
+        }
+
+        function linkClickHandler(event) {
+
+            event.preventDefault();
+
+            var href = event.target.getAttribute("href");
+            
+            console.log("Redirecting to:", href);
+        }
+
+        document.getElementById("link1").addEventListener("click", linkClickHandler);
+        document.getElementById("link2").addEventListener("click", linkClickHandler);
+        document.getElementById("link3").addEventListener("click", linkClickHandler);
+
+        updateTime();
+        setInterval(updateTime, 1000);
+    </script>
+</body>
+</html>
